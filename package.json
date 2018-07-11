@@ -1,0 +1,23 @@
+{
+  "name": "docker-utilitario",
+  "version": "1.0.0",
+  "description": "scripts npm para automatizar el trabajo con imágenes de docker.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josuehcordova/docker-automate-image.git"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "Josue Huancapaza Cordova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josuehcordova/docker-automate-image/issues"
+  },
+  "homepage": "https://github.com/josuehcordova/docker-automate-image",
+  "bin": {
+    "docker-build": "./docker-build",
+    "docker-push": "./docker-push",
+    "docker-run": "./docker-run"
+  }
+}

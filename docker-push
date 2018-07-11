@@ -20,9 +20,7 @@ fi
 
 echo "$VERSION"
 
-docker tag "$NAME:$VERSION" "$PREFIX/$NAME"
-docker push "$PREFIX/$NAME"
 docker tag "$NAME:$VERSION" "$PREFIX/$NAME:$VERSION"
 docker push "$PREFIX/$NAME:$VERSION"
-docker tag -f "$NAME:$VERSION" "$PREFIX/$NAME:latest"
+docker tag "$NAME:$VERSION" "$PREFIX/$NAME:latest"
 docker push "$PREFIX/$NAME:latest"

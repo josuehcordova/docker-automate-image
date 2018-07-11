@@ -1,5 +1,5 @@
 {
-  "name": "docker-utilitario",
+  "name": "docker-automate-image",
   "version": "1.0.0",
   "description": "scripts npm para automatizar el trabajo con imágenes de docker.",
   "repository": {

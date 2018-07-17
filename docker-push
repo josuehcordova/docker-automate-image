@@ -20,7 +20,20 @@ fi
 
 echo "$VERSION"
 
-docker tag "$NAME:$VERSION" "$PREFIX/$NAME:$VERSION"
-docker push "$PREFIX/$NAME:$VERSION"
-docker tag "$NAME:$VERSION" "$PREFIX/$NAME:latest"
-docker push "$PREFIX/$NAME:latest"
+# Argumentos
+TAG="latest"
+if [ "$#" -ne 0 ]; then
+	ARG=$(echo "$@" | cut -d "=" -f 1)
+	VALOR=$(echo "$@" | cut -d "=" -f 2)
+	echo "$ARG = $VALOR"    
+	
+    if test "$ARG" = "env"; then
+        TAG="$VALOR"
+
+        docker tag "$NAME:$VERSION" "$PREFIX/$NAME:$TAG-$VERSION"
+        docker push "$PREFIX/$NAME:$TAG-$VERSION"
+    fi
+fi
+
+docker tag "$NAME:$VERSION" "$PREFIX/$NAME:$TAG"
+docker push "$PREFIX/$NAME:$TAG"

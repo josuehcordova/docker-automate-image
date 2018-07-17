@@ -41,7 +41,11 @@ Empuje la imagen del acoplador al registro docker especificado en su paquete. Js
 
     npm run docker-push
 
-argumentos de docker-run
+Argumentos de docker-push
+Incluir un tag diferente segun el ambiente 
+    npm run docker-push tag=prod
+
+Argumentos de docker-run
 Es común tener que pasar argumentos cuando se ejecuta una ventana acoplable. El carácter '+' para dividir los argumentos para el comando docker.
 
 Aquí hay algunos ejemplos de lo que significan

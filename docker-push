@@ -27,7 +27,7 @@ if [ "$#" -ne 0 ]; then
 	VALOR=$(echo "$@" | cut -d "=" -f 2)
 	echo "$ARG = $VALOR"    
 	
-    if test "$ARG" = "env"; then
+    if test "$ARG" = "tag"; then
         TAG="$VALOR"
 
         docker tag "$NAME:$VERSION" "$PREFIX/$NAME:$TAG-$VERSION"
